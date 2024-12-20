@@ -54,3 +54,4 @@
 //   log.snapshot('after');
 //   log.end();
 // });
+/// <reference types="cypress-xpath" />
