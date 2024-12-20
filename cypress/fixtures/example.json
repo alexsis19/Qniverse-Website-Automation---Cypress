@@ -1,0 +1,16 @@
+const contactusdata = [
+  {
+    "fullname": "Sis Maharjan",
+    "companyname": "Qniverse",
+    "email": "sis.maharjan@qniverse.co.uk",
+    "phone": "9749708505",
+    "howcanwehelpyou": "This is from test automation framework created using cypress."
+  },
+  {
+    "fullname": "Maharjan Sis",
+    "companyname": "DogmaGroup",
+    "email": "sis.maharjan@dogmagroup.co.uk",
+    "phone": "9749708505",
+    "howcanwehelpyou": "This is from test automation framework created using cypress..."
+  }
+];

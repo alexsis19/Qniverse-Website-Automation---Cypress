@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "cypress": "^13.16.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-multi-reporters": "^2.0.4",
+    "marge": "^1.0.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "neat-csv": "^5.2.0",
+    "prettier": "3.4.2"
+  },
+  "dependencies": {
+    "@cypress/xpath": "^2.0.3"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:chrome": "cypress run --browser chrome --headless",
+    "cypress:edge": "cypress run --browser edge --headless",
+    "cypress:browser": "cypress run --browser chrome --headless && cypress run --browser edge --headless"
+  }
+}
