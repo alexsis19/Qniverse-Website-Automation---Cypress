@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-12-19T06:13:11.461Z",
-    "end": "2024-12-19T06:13:22.854Z",
-    "duration": 11393,
+    "failures": 0,
+    "start": "2024-12-23T07:59:20.053Z",
+    "end": "2024-12-23T07:59:32.959Z",
+    "duration": 12906,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7553bd74-130f-4edb-acc4-f0b264f5f214",
+      "uuid": "c77a87e8-a157-4a52-8ef5-d7d19a32e978",
       "title": "",
       "fullFile": "cypress\\e2e\\contactus.cy.js",
       "file": "cypress\\e2e\\contactus.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "098b53da-ff9e-41cc-85e9-f96e825e14b1",
+          "uuid": "4533e8e8-e4bd-49c4-b410-5e9a5ea9167e",
           "title": "Contact US Module",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "Valid login test scenario",
               "fullTitle": "Contact US Module Valid login test scenario",
               "timedOut": null,
-              "duration": 11294,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 12816,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\contactus.cy.js\\\\Contact US Module -- Valid login test scenario (failed).png\"\n    ]\n  ]\n}",
-              "code": "contactus.connectwithus().click();\ncontactus.fullname().type(fullname);\ncontactus.companyname().type(companyname);\ncontactus.email().type(email); //Enter username\ncontactus.phone().type(phone); //Enter Password\ncontactus.howcanwehelpyou().type(howcanwehelpyou); //Enter Password\ncontactus.submitbtn().click();",
-              "err": {
-                "message": "TypeError: cy.get(...).should(...).should.be is not a function",
-                "estack": "TypeError: cy.get(...).should(...).should.be is not a function\n    at Contactus.connectwithus (webpack:///./cypress/support/page-object/contactus.po.js:5:74)\n    at Context.eval (webpack:///./cypress/e2e/contactus.cy.js:18:14)",
-                "diff": null
-              },
-              "uuid": "1c5cf63c-2b4e-4d2a-910f-38be8381a526",
-              "parentUUID": "098b53da-ff9e-41cc-85e9-f96e825e14b1",
+              "context": null,
+              "code": "contactus.connectwithus();\ncontactus.fullname().type(selectedFullname);\n// contactus.fullname().type(fullname);\ncontactus.companyname().type(selectedCompanyname);\ncontactus.email().type(selectedEmail);\ncontactus.phone().type(selectedPhone);\ncontactus.howcanwehelpyou().type(selectedhowcanwehelpyou);\ncy.intercept('POST', 'https://qniverse.co.uk/wp-json/contact-form-7/v1/contact-forms/217/feedback').as('formSubmission'); // Replace with actual endpoint\ncontactus.submitbtn().click();\n// cy.submit('input[value=\"Submit\"]');\ncy.wait('@formSubmission').then(({\n  response\n}) => {\n  //   expect(response.body.message).to.eq('Your form has been submitted successfully.');\n  expect(response.body.message).to.eq('There was an error trying to send your message. Please try again later.');\n  expect(response.statusCode).to.eq(200);\n});",
+              "err": {},
+              "uuid": "6b623c27-705d-4eb9-aa56-a1331add50af",
+              "parentUUID": "4533e8e8-e4bd-49c4-b410-5e9a5ea9167e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "1c5cf63c-2b4e-4d2a-910f-38be8381a526"
+          "passes": [
+            "6b623c27-705d-4eb9-aa56-a1331add50af"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11294,
+          "duration": 12816,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
