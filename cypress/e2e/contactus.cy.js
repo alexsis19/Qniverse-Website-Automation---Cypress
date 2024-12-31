@@ -19,7 +19,7 @@ describe("Contact US Module", () => {
     cy.visit('/contact-us');
   });
   // Valid login test case
-  it("Valid login test scenario", () => {
+  it("Valid form fill up", () => {
     contactus.connectwithus();
     contactus.fullname().type(selectedFullname);
     // contactus.fullname().type(fullname);
